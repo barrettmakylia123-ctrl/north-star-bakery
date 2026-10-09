@@ -13,3 +13,13 @@ Upload the files to a **public** GitHub repository. Enable GitHub Pages (Setting
 Touchstone Task 2 referred to these files, but the media binaries were not included in the supplied Word document: `bakery-logo.png`, `bakery-feature-large.jpg`, `bakery-feature-small.jpg`, `bakery-signature-loaf.jpg`, `bakery-bread.jpg`, `bakery-storefront.jpg`, `bakery-welcome.mp3`, and `bakery-behind-scenes.mp4`. Upload the original media with these names to the same folder before final submission. The HTML retains alt text and audio/video fallback text.
 
 The contact form is a static HTML demonstration; it does not transmit inquiries to a backend.
+
+
+## Touchstone 4 additions
+- `script.js`: dynamic multi-select bakery favorites (array of product objects; `favorites` array) with browser `localStorage` persistence.
+- `products.html`: favorite toggle buttons, selected summary, clear button.
+- `contact.html`: JavaScript validation with field-specific errors and submit prevention. **Demonstration only**: no inquiries are transmitted.
+- `index.html`: corrected malformed storefront image tag.
+
+### Test locally
+Open `products.html`, select two favorites, refresh and verify selections persist, then clear. Open `contact.html`, press Check Inquiry with empty fields and verify inline errors; enter a bad email and verify email error; correct fields and verify the demonstration success message.

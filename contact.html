@@ -21,18 +21,21 @@
     <main class="page-layout">
         <section>
             <h2>Send Us an Inquiry</h2>
-            <p>Use this form to ask a question or request a bakery pre-order. We will use your information to respond about availability and pickup details.</p>
-            <form action="#" method="post">
+            <p>Use this form to ask a question or request a bakery pre-order. This demonstration form checks your details locally; it does not send requests to the bakery.</p>
+            <form id="inquiry-form" action="#" method="post" novalidate>
                 <fieldset>
                     <legend>Customer Information</legend>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required minlength="2">
+                    <span class="field-error" id="name-error" aria-live="polite"></span>
 
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
+                    <span class="field-error" id="email-error" aria-live="polite"></span>
 
                     <label for="pickup-date">Pickup date:</label>
                     <input type="date" id="pickup-date" name="pickup-date" required>
+                    <span class="field-error" id="pickup-date-error" aria-live="polite"></span>
 
                     <label for="request-type">Request type:</label>
                     <select id="request-type" name="request-type" required>
@@ -40,16 +43,19 @@
                         <option value="pre-order">Pre-order</option>
                         <option value="general-question">General question</option>
                     </select>
+                    <span class="field-error" id="request-type-error" aria-live="polite"></span>
                 </fieldset>
                 <fieldset>
                     <legend>Order Details</legend>
                     <label for="item-details">Item details:</label>
                     <textarea id="item-details" name="item-details" rows="5" required minlength="5"></textarea>
+                    <span class="field-error" id="item-details-error" aria-live="polite"></span>
 
                     <label for="allergy-notes">Allergy notes, if applicable:</label>
                     <textarea id="allergy-notes" name="allergy-notes" rows="4" placeholder="List any food allergies or dietary concerns."></textarea>
                 </fieldset>
-                <button type="submit">Submit Inquiry</button>
+                <button type="submit">Check Inquiry</button>
+                <p id="form-status" role="status" aria-live="polite"></p>
             </form>
         </section>
         <section>
@@ -62,5 +68,6 @@
     <footer>
         <p>&copy; 2026 North Star Bakery. Fresh baking for our community.</p>
     </footer>
+    <script src="script.js" defer></script>
 </body>
 </html>

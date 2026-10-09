@@ -26,3 +26,12 @@ textarea {resize:vertical}button {align-self:flex-start;background:var(--brown);
 footer {background:var(--brown);color:var(--cream);text-align:center;padding:1.25rem 1rem;margin-top:2rem}
 @media (min-width:720px) {header {padding-top:2rem;padding-bottom:1.4rem}nav ul {flex-direction:row;flex-wrap:wrap;gap:.6rem}.page-layout {flex-direction:row;flex-wrap:wrap;align-items:stretch;gap:1.5rem;margin:2.5rem auto}.page-layout>section {flex:1 1 calc(50% - 1.5rem);padding:1.8rem}.page-layout>section:only-child {flex-basis:100%}fieldset {padding:1.4rem}}
 @media (min-width:1050px) {.page-layout>section {flex-basis:calc(50% - 1.5rem)}}
+
+/* Touchstone 4: favorites and accessible inline validation */
+.favorite-options {display:flex;flex-wrap:wrap;gap:.65rem;margin:1rem 0}
+.favorite-toggle {background:var(--cream);color:var(--brown);border:2px solid var(--brown);border-radius:1rem;padding:.65rem 1rem}
+.favorite-toggle[aria-pressed="true"] {background:var(--brown);color:var(--cream)}
+.favorites-summary {font-weight:700;color:var(--brown)}
+.field-error {display:block;min-height:1.1rem;color:#9d2828;font-size:.92rem;font-weight:700}
+[aria-invalid="true"] {border:2px solid #9d2828}
+#form-status {font-weight:700;color:var(--brown)}
