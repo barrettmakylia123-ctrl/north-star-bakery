@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Star Bakery | Contact &amp; Pre-Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contact &amp; Pre-Order</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a aria-current="page" href="contact.html">Contact &amp; Pre-Order</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="page-layout">
+        <section>
+            <h2>Send Us an Inquiry</h2>
+            <p>Use this form to ask a question or request a bakery pre-order. We will use your information to respond about availability and pickup details.</p>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Customer Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required minlength="2">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="pickup-date">Pickup date:</label>
+                    <input type="date" id="pickup-date" name="pickup-date" required>
+
+                    <label for="request-type">Request type:</label>
+                    <select id="request-type" name="request-type" required>
+                        <option value="">Select one</option>
+                        <option value="pre-order">Pre-order</option>
+                        <option value="general-question">General question</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Order Details</legend>
+                    <label for="item-details">Item details:</label>
+                    <textarea id="item-details" name="item-details" rows="5" required minlength="5"></textarea>
+
+                    <label for="allergy-notes">Allergy notes, if applicable:</label>
+                    <textarea id="allergy-notes" name="allergy-notes" rows="4" placeholder="List any food allergies or dietary concerns."></textarea>
+                </fieldset>
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </section>
+        <section>
+            <h2>Location and Hours</h2>
+            <p>North Star Bakery is a neighborhood bakery serving local customers and event planners.</p>
+            <p>Monday–Saturday: 7:00 a.m.–6:00 p.m.<br>
+            Sunday: 8:00 a.m.–2:00 p.m.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 North Star Bakery. Fresh baking for our community.</p>
+    </footer>
+</body>
+</html>

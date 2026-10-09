@@ -1,0 +1,28 @@
+/* North Star Bakery — shared mobile-first visual system */
+:root { --cream:#FFF8F0; --brown:#6B3E26; --peach:#D88C5A; --charcoal:#2F2A26; }
+* {box-sizing:border-box}
+html {font-size:16px; scroll-behavior:smooth}
+body {margin:0; background:var(--cream); color:var(--charcoal); font-family:Arial,Helvetica,sans-serif; line-height:1.65}
+h1,h2,legend {font-family:Georgia,'Times New Roman',serif; line-height:1.25}
+h1 {font-size:clamp(1.8rem,5vw,2.65rem);margin:0 0 1rem}
+h2 {font-size:1.55rem;color:var(--brown);margin:0 0 .75rem}
+header {background:var(--brown);color:var(--cream);padding:1.5rem max(1rem,calc((100vw - 1100px)/2));}
+header h1 {color:var(--cream)}
+nav ul {list-style:none;display:flex;flex-direction:column;gap:.4rem;margin:0;padding:0}
+nav a {display:block;color:var(--cream);text-decoration:none;font-weight:700;padding:.5rem .8rem;border-radius:.35rem}
+nav a:hover,nav a:focus-visible,nav a[aria-current="page"] {background:var(--peach);color:var(--charcoal)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible {outline:3px solid var(--peach);outline-offset:3px}
+.page-layout {width:min(100% - 2rem,1100px);margin:2rem auto;display:flex;flex-direction:column;gap:1.25rem}
+section {background:#fff; border:1px solid #ead6c6; border-radius:.7rem; padding:1.3rem; min-width:0}
+p {margin:.5rem 0 1rem}p:last-child {margin-bottom:0}
+img,picture img,video {display:block;max-width:100%;height:auto;border-radius:.45rem}
+img {margin:1rem 0}figure {margin:1rem 0}figcaption {font-size:.92rem;margin-top:.4rem}
+a {color:var(--brown)}audio {max-width:100%;width:100%}
+form {display:flex;flex-direction:column;gap:1.1rem}fieldset {border:2px solid var(--peach);border-radius:.5rem;padding:1rem;display:flex;flex-direction:column;gap:.45rem;min-width:0}
+legend {color:var(--brown);font-size:1.25rem;font-weight:bold;padding:0 .35rem}
+label {font-weight:700;margin-top:.5rem}
+input,select,textarea {width:100%;font:inherit;color:var(--charcoal);background:#fff;border:1px solid var(--brown);border-radius:.35rem;padding:.65rem;min-height:2.8rem}
+textarea {resize:vertical}button {align-self:flex-start;background:var(--brown);color:var(--cream);border:0;border-radius:.4rem;font:700 1rem Arial,sans-serif;padding:.8rem 1.4rem;cursor:pointer}button:hover {background:var(--charcoal)}
+footer {background:var(--brown);color:var(--cream);text-align:center;padding:1.25rem 1rem;margin-top:2rem}
+@media (min-width:720px) {header {padding-top:2rem;padding-bottom:1.4rem}nav ul {flex-direction:row;flex-wrap:wrap;gap:.6rem}.page-layout {flex-direction:row;flex-wrap:wrap;align-items:stretch;gap:1.5rem;margin:2.5rem auto}.page-layout>section {flex:1 1 calc(50% - 1.5rem);padding:1.8rem}.page-layout>section:only-child {flex-basis:100%}fieldset {padding:1.4rem}}
+@media (min-width:1050px) {.page-layout>section {flex-basis:calc(50% - 1.5rem)}}
